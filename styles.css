@@ -110,16 +110,17 @@ iframe {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
-  justify-items: center;
+  grid-template-columns: repeat(2, 1fr); /* Force 2 equal columns */
+  gap: 20px;
   padding: 20px;
+  justify-items: center; /* Center the images in each cell */
 }
 
 .image-grid img {
-  width: 100%;
-  max-width: 120px;
-  border-radius: 8px;
+  width: 100%;             /* Fill grid cell */
+  max-width: 300px;        /* Don't exceed this width */
+  height: auto;
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -130,8 +131,7 @@ iframe {
 
 .logo {
   display: block; 
-  height: 60px;
+  height: 100px;
   width: auto;
-  display: block;
   margin: auto;
 }
